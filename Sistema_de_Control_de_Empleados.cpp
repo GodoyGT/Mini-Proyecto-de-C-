@@ -15,3 +15,62 @@ mpleados, calcular el sueldo total y mostrar el empleado con mayor y menor sueld
 La información deberá almacenarse utilizando arreglos y el programa deberá estar organizado mediante 
 funciones y validaciones básicas.
 */
+
+#include <iostream>
+using namespace std;
+
+// VARIABLES GLOBALES
+string nombres[100];
+int edades[100];
+float sueldos[100];
+
+int cantidad = 0;
+
+//FUNCION PARA REGISTRAR EMPLEADOS
+void registrarEmpleados ()
+{
+    int n;
+
+    cout << endl;
+    cout << "CUANTOS EMPLEADOS DESEA REGISTRAR: ";
+    cin >> n;
+
+    //VALIDACIÓN
+    while (n <= 0)
+    {
+        cout << "Ingrese una cantidad valida: ";
+        cin >> n;
+    }
+
+    for (int i=0; i < n; i++)
+    {
+        cout << endl;
+        cout << "EMPLEADO #" << i + 1 << endl;
+
+        cout << "Nombre: ";
+        cin >> nombres[cantidad];
+
+        cout << "Edad: ";
+        cin >> edades[cantidad];
+
+            while (edades[cantidad] <= 0)
+            {
+            cout << "Edad invalida. Ingrese nuevamente: ";
+            cin >> edades[cantidad];
+            }
+
+        cout << "Sueldo: ";
+        cin >> sueldos[cantidad];
+
+            while (sueldos[cantidad] < 0)
+            {
+            cout << "Sueldo invalido. Ingrese nuevamente: ";
+            cin >> sueldos[cantidad];
+            }
+    
+        cantidad++;
+    }
+    cout << endl;
+    cout << "EMPLEADOS REGISTRADOS CORRECTAMENTE." << endl;
+} 
+
