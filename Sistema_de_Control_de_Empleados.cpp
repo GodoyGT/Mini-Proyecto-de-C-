@@ -137,6 +137,34 @@ void calcularSueldos ()
     cout << endl;
     cout << "SUELDO TOTAL A PAGAR: $" << total << endl;
 }
+// FUNCION PARA MOSTRAR EL MAYOR SUELDO
+void mayorSueldo ()
+{
+    if (cantidad == 0)
+    {
+        cout << endl;
+        cout << "NO HAY EMPLEADOS REGISTRADOS." << endl;
+    }
+    else
+    {
+        float mayor = sueldos[0];
+        int posicion = 0;
 
+        for (int i = 1; i < cantidad; i++)
+        {
+            if (sueldos[i] > mayor)
+            {
+                mayor = sueldos [i];
+                posicion = i;
+            }
+        }
+
+        cout << endl;
+        cout << "EMPLEADO CON MAYOR SUELDO" << endl;
+        cout << "Nombre: " << nombres[posicion] << endl;
+        cout << "Edad: " << edades[posicion] << endl;
+        cout << "Sueldo: $" << sueldos[posicion] << endl;
+    }
+}
 
 
