@@ -242,7 +242,8 @@ int main ()
             case 7:
                 cout << endl;
                 cout << "GRACIAS POR USAR EL SISTEMA." << endl;
-
+                break;
+                
             default:
                 cout << endl;
                 cout << "OPCION INVALIDA." << endl;
@@ -253,12 +254,3 @@ int main ()
     return 0;
     
 }
-
-
-
-    
-
-
-
-
-
