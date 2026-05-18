@@ -166,5 +166,41 @@ void mayorSueldo ()
         cout << "Sueldo: $" << sueldos[posicion] << endl;
     }
 }
+// FUNCION PARA MOSTRAR EL MENOR SUELDO
+void menorSueldo ()
+{
+    if (cantidad == 0)
+    {
+        cout << endl;
+        cout << "NO HAY EMPLEADOS REGISTRADOS." << endl;
+    }
+    else
+    {
+        float menor = sueldos[0];
+        int posicion = 0;
+
+        for (int i = 1; i < cantidad; i++)
+        {
+            if (sueldos[i] < menor)
+            {
+                menor = sueldos[i];
+                posicion = i;
+            }
+        }
+
+        cout << endl;
+        cout << "EMPLEADO CON MENOR SUELDO" << endl;
+        cout << "Nombre: " << nombres[posicion] << endl;
+        cout << "Edad: " << edades[posicion] << endl;
+        cout << "Sueldo: $" << sueldos[posicion] << endl;
+    }
+}
+
+
+
+    
+
+
+
 
 
