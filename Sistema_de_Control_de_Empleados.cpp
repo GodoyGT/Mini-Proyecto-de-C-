@@ -96,8 +96,8 @@ void mostrarEmpleados()
     }
 }
 // FUNCION PARA BUSCAR EMPLEADO
- void buscarEmpleado()
- {
+void buscarEmpleado()
+{
     string nombreBuscar;
     bool encontrado = false;
 
@@ -123,4 +123,20 @@ void mostrarEmpleados()
         cout << endl;
         cout << "EMPLEADO NO ENCONTRADO." << endl;
     }
- }
+}
+// FUNCION PARA CALCULAR SUELDO TOTAL
+void calcularSueldos ()
+{
+    float total = 0;
+    
+    for (int i = 0; i < cantidad; i++)
+    {
+        total = total + sueldos[i];
+    }
+
+    cout << endl;
+    cout << "SUELDO TOTAL A PAGAR: $" << total << endl;
+}
+
+
+
