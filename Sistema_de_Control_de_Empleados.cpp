@@ -195,6 +195,64 @@ void menorSueldo ()
         cout << "Sueldo: $" << sueldos[posicion] << endl;
     }
 }
+// MENU PRINCIPAL
+int main ()
+{
+    int opcion;
+
+    do
+    {
+        cout << endl;
+        cout << "========== MENU PRINCIPAL ==========" << endl;
+        cout << "1. Registrar empleados" << endl;
+        cout << "2. Mostrar empleados" << endl; 
+        cout << "3. Buscar empleado" << endl;
+        cout << "4. Calctular sueldo total" << endl;
+        cout << "5. Mostrar mayor sueldo " << endl;
+        cout << "6. Mostrar menor sueldo" << endl;
+        cout << "7. Salir" << endl;
+        cin >> opcion;
+
+        switch (opcion)
+        {
+            case 1:
+                registrarEmpleados();
+                break;
+            
+            case 2:
+                mostrarEmpleados();
+                break;
+
+            case 3:
+                buscarEmpleado();
+                break;
+
+            case 4:
+                calcularSueldos();
+                break;
+
+            case 5:
+                mayorSueldo();
+                break;
+
+            case 6:
+                menorSueldo();
+                break;
+
+            case 7:
+                cout << endl;
+                cout << "GRACIAS POR USAR EL SISTEMA." << endl;
+
+            default:
+                cout << endl;
+                cout << "OPCION INVALIDA." << endl;
+        }
+    }
+    while (opcion != 7);
+
+    return 0;
+    
+}
 
 
 
