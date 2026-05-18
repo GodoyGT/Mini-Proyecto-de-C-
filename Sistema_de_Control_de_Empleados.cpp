@@ -19,7 +19,6 @@ funciones y validaciones básicas.
 #include <iostream>
 using namespace std;
 
-// VARIABLES GLOBALES
 string nombres[100];
 int edades[100];
 float sueldos[100];
@@ -96,3 +95,32 @@ void mostrarEmpleados()
     }
     }
 }
+// FUNCION PARA BUSCAR EMPLEADO
+ void buscarEmpleado()
+ {
+    string nombreBuscar;
+    bool encontrado = false;
+
+    cout << endl;
+    cout << "Ingrese el nombre del empleado: ";
+    cin >> nombreBuscar;
+
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (nombres [i] == nombreBuscar)
+        {
+            cout << endl;
+            cout << "EMPLEADO ENCONTRADO" << endl;
+            cout << "Nombre: " << nombres[i] << endl;
+            cout << "Edad: " << edades[i] << endl;
+            cout << "Sueldo: $" << sueldos[i] << endl;
+
+            encontrado = true;
+        }
+    }
+    if (encontrado == false)
+    {
+        cout << endl;
+        cout << "EMPLEADO NO ENCONTRADO." << endl;
+    }
+ }
