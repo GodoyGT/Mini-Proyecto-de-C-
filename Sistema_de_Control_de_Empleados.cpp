@@ -73,4 +73,26 @@ void registrarEmpleados ()
     cout << endl;
     cout << "EMPLEADOS REGISTRADOS CORRECTAMENTE." << endl;
 } 
+// FUNCION PARA MOSTRAR EMPLEADOS
+void mostrarEmpleados()
+{
+    if (cantidad==0)
+    {
+        cout << endl;
+        cout << "NO HAY EMPLEADOS REGISTRADOS." << endl;
+    }
+    else
+    {
+        cout << endl;
+        cout << "LISTA DE EMPLEADOS" << endl;
 
+    for (int i = 0; i < cantidad; i++)
+    {
+        cout << endl;
+        cout << "EMPLEADO#" << i + 1 << endl;
+        cout << "Nombre: " << nombres[i] << endl;
+        cout << "Edad: " << edades[i] << endl;
+        cout << "Sueldo: $" << sueldos[i] << endl;
+    }
+    }
+}
