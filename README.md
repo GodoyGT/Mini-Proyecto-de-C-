@@ -48,7 +48,7 @@ Además, se utilizan arreglos para almacenar:
 
 ## Autor
 
-Galo Godouy
+Galo Godoy
 
 ---
 
